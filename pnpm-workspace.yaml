@@ -2,6 +2,8 @@ packages:
   - packages/**
   - apps/**
 overrides:
+  # Kaneo uses the Drizzle adapter via better-auth/minimal; the Kysely adapter is never loaded.
+  "@better-auth/kysely-adapter": "-"
   "@isaacs/brace-expansion": 5.0.1
   "@hono/node-server": ">=2.1.5 <3"
   ajv: 8.20.0
@@ -47,6 +49,7 @@ overrides:
   vite@*: "catalog:"
   vitest@*: "catalog:"
 patchedDependencies:
+  '@better-auth/api-key@1.7.14': patches/@better-auth__api-key@1.7.14.patch
   # No upstream release yet; preserve the existing Forge and Zod 3 consumer APIs.
   node-forge@1.4.0: patches/node-forge@1.4.0.patch
   zod@3.25.76: patches/zod@3.25.76.patch

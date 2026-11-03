@@ -23,7 +23,7 @@ import {
   owner,
 } from "@kaneo/permissions";
 import bcrypt from "bcryptjs";
-import { betterAuth } from "better-auth";
+import { betterAuth } from "better-auth/minimal";
 import {
   APIError,
   createAuthMiddleware,

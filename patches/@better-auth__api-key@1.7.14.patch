@@ -1,0 +1,13 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 3e77b9b70275ed2e5fff98b2a642b80126193cdf..dc20e7b5be902659a61ff3cffcf5c4882e32e2be 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -3,7 +3,7 @@ import { createAuthEndpoint, createAuthMiddleware } from "@better-auth/core/api"
+ import { getIP } from "@better-auth/core/utils/ip";
+ import { base64Url } from "@better-auth/utils/base64";
+ import { createHash } from "@better-auth/utils/hash";
+-import { BetterAuthError } from "better-auth";
++import { BetterAuthError } from "@better-auth/core/error";
+ import { APIError, getSessionFromCtx, sessionMiddleware } from "better-auth/api";
+ import { generateRandomString } from "better-auth/crypto";
+ import { mergeSchema } from "better-auth/db";
